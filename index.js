@@ -23,11 +23,10 @@ app.use("/api/message", messageRoutes);
 
 // --------------------------deployment------------------------------
 
-const __dirname1 = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
   app.get("/", (req, res) => {
-    res.send("hii all")
+    res.send("hii all");
   })
 } else {
   app.get("/", (req, res) => {
@@ -38,8 +37,8 @@ if (process.env.NODE_ENV === "production") {
 // --------------------------deployment------------------------------
 
 // Error Handling middlewares
-app.use(notFound);
-app.use(errorHandler);
+// app.use(notFound);
+// app.use(errorHandler);
 
 const PORT = process.env.PORT;
 
