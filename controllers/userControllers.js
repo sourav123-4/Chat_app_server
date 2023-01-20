@@ -2,7 +2,7 @@ const asyncHandler = require("express-async-handler");
 const User = require("../models/userModel");
 const generateToken = require("../config/generateToken");
 
-const allUsers = asyncHandler(async (req, res) => {
+const searchUsers = asyncHandler(async (req, res) => {
 
   console.log("rreq.searcg", req.body, req.headers)
   const keyword = req.body.search
@@ -75,4 +75,4 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { allUsers, registerUser, authUser };
+module.exports = { searchUsers, registerUser, authUser };
